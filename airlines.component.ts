@@ -1,6 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { Router } from "@angular/router";
-import { MarvelService } from "../services/marvel.service";
+import { MarvelService } from "../services/airline.service";
 
 @Component({
     selector:"super-heroe",

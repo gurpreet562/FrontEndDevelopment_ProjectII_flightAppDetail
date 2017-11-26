@@ -1,26 +1,26 @@
 import { Component } from '@angular/core';
 import {ActivatedRoute, Router} from "@angular/router";
-import {MarvelService} from "../services/marvel.service";
+import {FlightService} from "../services/flight.service";
 
 @Component({
-    templateUrl: "/app/hero/heroe.component.html"
+    templateUrl: "/app/flight/flight.component.html"
 })
 
 export class HeroeComponent{
-    hero:Object;
+    flight:Object;
 
     constructor(private route: ActivatedRoute,
-                private marvelservice: MarvelService,
+                private flightservice: FlightService,
                 private router: Router){
 
     }
 
     ngOnInit(){
         let id = +this.route.snapshot.params['id'];
-        this.marvelservice.infoCharacter(id)
-            .then(hero => this.hero = hero);
+        this.flightservice.infoCharacter(id)
+            .then(flight => this.flight = fligt);
     }
-    volver(){
+    add(){
         this.router.navigate(['/']);
     }
 }

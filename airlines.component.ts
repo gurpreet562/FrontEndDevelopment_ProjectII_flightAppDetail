@@ -11,21 +11,21 @@ export class CharactersComponent implements OnInit{
     heroes:Array<Object>;
     rounded: Boolean = true;
 
-    constructor(private marvelservice: MarvelService,
+    constructor(private airlineservice: AirLineService,
                 private router: Router){
     }
 
     listHeroes(){
-        this.marvelservice.marvelCharacters()
-            .then(heroes => this.heroes = heroes);
+        this.airlineservice.airlineCharacters()
+            .then(airlines => this.airlines = airlines);
     }
 
     ngOnInit(){
-        this.listHeroes();
+        this.listAirlines();
 
     }
 
     clickHero(hero){
-        this.router.navigate(['/hero'], hero.id)
+        this.router.navigate(['/airlines'], airlines.id)
     }
 }

@@ -8,12 +8,12 @@ export class Auth{
     lock=new Auth0Lock('kNEvXpj9aXYMrqdIPwBI-4Aln288H3x7','comicsapp506.auth0.com',{});
     constructor(){
         this.lock.on("authenticated",(authResult:any)=>{
-            this.lock.getProfile(authResult.idToken,function(error:any,profile:any){
+            this.lock.getProfile(authResult.idToken,function(error:any,status:any){
                 if(error){
                     throw new Error(error);
                 }
 localStorage.setItem('id_token',authResult.idToken);
-localStorage.setItem('profile',JSON.stringify(profile));
+localStorage.setItem('status',JSON.stringify(profile));
             });
             
         });
@@ -26,7 +26,7 @@ localStorage.setItem('profile',JSON.stringify(profile));
     };
     public logout(){
         localStorage.removeItem('id_token');
-        localStorage.removeItem('profile');
+        localStorage.removeItem('status');
     };
 }
     

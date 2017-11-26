@@ -8,7 +8,7 @@ export class Auth{
     lock=new Auth0Lock('kNEvXpj9aXYMrqdIPwBI-4Aln288H3x7','comicsapp506.auth0.com',{});
     constructor(){
         this.lock.on("authenticated",(authResult:any)=>{
-            this.lock.getProfile(authResult.idToken,function(error:any,status:any){
+            this.lock.getStatus(authResult.idToken,function(error:any,status:any){
                 if(error){
                     throw new Error(error);
                 }

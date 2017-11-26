@@ -1,0 +1,18 @@
+<nav class="navbar navbar-inverse">                                               
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">ComicApp</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a routerLink="/">Home</a></li>
+      <li><a href="#" (click)="auth.login()" *ngIf="!auth.authenticated()">Login</a></li>
+      <li><a routerLink="/profile" *ngIf="auth.authenticated()">Profile</a></li>
+      <li><a href="#" (click)="auth.logout()" *ngIf="auth.authenticated()">Logout</a></li>
+     </ul>
+      
+     
+  </div>
+</nav>
+<div class="container">
+    <router-outlet></router-outlet>
+    </div>

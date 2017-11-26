@@ -1,1 +1,1 @@
-# FrontEndDevelopment_ProjectII_flightAppDetail
+# FrontEndDevelopment_ProjectII_ComicsApp

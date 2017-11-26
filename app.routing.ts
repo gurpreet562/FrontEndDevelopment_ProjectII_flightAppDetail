@@ -1,7 +1,7 @@
 import {ModuleWithProviders} from '@angular/core';
 import {Routes,RouterModule} from '@angular/router';
-import { HomeComponent }  from './Components/home/home.component';
-import { ProfileComponent }  from './Components/profile/profile.component';
+import { AddComponent }  from './Components/add/add.component';
+import {DetailComponent }  from './Components/detail/detail.component';
 import {CharactersComponent} from "../characters/character.component";
 import { HeroeComponent } from "../hero/heroe.component";
 import {AuthGuard} from './auth.guard';
@@ -9,25 +9,25 @@ import {AuthGuard} from './auth.guard';
 const appRoutes:Routes=[
     {
         path:'',
-        component:HomeComponent
+        component:AddComponent
     },
 
     {
-        path:'profile',
-        component:ProfileComponent,
+        path:'detail',
+        component:DetailComponent,
         canActivate:[AuthGuard]
     },
      {
          path:"", 
-      component: CharactersComponent
+      component: StatusComponent
      },
     {
-        path:"hero/:id", 
-        component: HeroeComponent
+        path:"arrival/:id", 
+        component: ArrivalComponent
     },
     {
         path:"**", 
-        component: CharactersComponent
+        component:AddComponent
     }
 
 

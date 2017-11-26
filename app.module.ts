@@ -3,15 +3,15 @@ import { BrowserModule } from '@angular/platform-browser';
 import {routing,appRoutingProviders} from './app.routing';
 
 import { AppComponent }  from './app.component';
-import { HomeComponent }  from './Components/home/home.component';
-import { ProfileComponent }  from './Components/profile/profile.component';
+import { AddComponent }  from './Components/add/add.component';
+import { DetailComponent }  from './Components/detail/detail.component';
 import {AUTH_PROVIDERS} from 'angular2-jwt';
 import {Auth} from './services/auth.service';
 import {AuthGuard} from './auth.guard';
 
 @NgModule({
   imports:      [ BrowserModule , routing],
-  declarations: [ AppComponent,HomeComponent,ProfileComponent ],
+  declarations: [ AppComponent,AddComponent,DetailComponent ],
   bootstrap:    [ AppComponent ],
   providers:[
     appRoutingProviders,
